@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+    <style>
+        body{
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+       div.container{
+        min-height: 400px;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        
+       } 
+       div.counter{
+        height: 150px;
+        width: 250px;
+        box-shadow: 4px 4px 7px rgba(0,0,0,0.2),
+                    -1px -1px 2px rgba(0,0,0,0.2);
+        font-size: 2.7rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+       }
+       div.count-container{
+        display: flex;
+        gap: 10px;
+       }
+       button{
+        padding: 5px 14px;
+        font-size: 1.5rem;
+        border: none;
+       }
+       
+       button.Challenge{
+        height: 80px;
+        width: 80px;
+        font-size: 3rem;
+        border-radius: 50%;
+        box-shadow: 4px 4px 7px rgba(0,0,0,0.2),
+                    -1px -1px 2px rgba(0,0,0,0.2);
+        background-color: white;
+       }
+       button#reset{
+        padding: 15px 20px;
+        border-radius: 20px;
+        box-shadow: 4px 4px 7px rgba(0,0,0,0.2),
+                    -1px -1px 2px rgba(0,0,0,0.2);
+        background-color: white;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="counter" id="counter" ></div>
+        <div class="count-container">
+            <button id="plus" onclick="plus()" class="Challenge">+</button>
+            <button id="minus" onclick="minus()" class="Challenge">-</button>
+        </div>
+        <button id="reset" onclick="reset()">Reset</button>
+    </div>
+    
+
+
+    <script>
+        let counter = document.getElementById("counter");
+        counter.innerHTML = 0;
+        let plusbtn = document.getElementById("plus");
+        let minusbtn = document.getElementById("minus");
+        let resetbtn = document.getElementById("reset");
+
+        function plus(){
+            counter.innerHTML++;
+           
+        }
+        function minus(){
+            counter.innerHTML--;
+           
+    }
+        function reset(){
+            counter.innerHTML = 0; 
+            
+    }
+        
+
+    </script>
+</body>
+</html>
